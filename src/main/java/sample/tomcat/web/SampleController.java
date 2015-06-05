@@ -32,7 +32,7 @@ public class SampleController {
     @ResponseBody
     public String helloWorld() {
         this.helloWorldService.insertMessage();
-	return this.helloWorldService.getHelloMessage();
+	return "prout " + this.helloWorldService.getHelloMessage();
     }
 
 }

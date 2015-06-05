@@ -1,0 +1,15 @@
+mysql:
+ image: mysql
+ environment: 
+  MYSQL_ROOT_PASSWORD: root
+  MYSQL_USER: user
+  MYSQL_PASSWORD: pass
+  MYSQL_DATABASE: boot
+
+web: 
+  image: mpousse/spring-boot-tomcat-mysql-app
+  links: 
+    - mysql
+  ports: 
+    - 8080:8080
+
